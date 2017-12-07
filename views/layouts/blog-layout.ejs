@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %> &mdash; Simple CRUD using Sails.js</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--STYLES-->
+    <link rel="stylesheet" href="/dependencies/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/dependencies/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/styles/jquery.gritter.css">
+    <link rel="stylesheet" href="/styles/jquery-ui.css">
+    <link rel="stylesheet" href="/styles/uniform.css">
+    <link rel="stylesheet" href="/styles/select2.css">
+    <link rel="stylesheet" href="/styles/fullcalendar.css">
+    <link rel="stylesheet" href="/styles/unicorn.main.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <!--STYLES END-->
+    <link rel="stylesheet" href="/styles/unicorn.blue.css" class="skin-color">
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div id="header">
+        <h1><a href="<%= sails.config.custom.baseUrl %>">Simple CRUD</a></h1>
+    </div>
+
+    <div id="sidebar">
+        <a href="#" class="visible-phone"><i class="icon icon-home"></i><%= title %></a>
+        <ul>
+            <li><a href="<%= sails.config.custom.baseUrl %>blog"><i class="icon icon-home"></i> <span>Home</span></a></li>
+            <li><a href="<%= sails.config.custom.baseUrl %>blog/list"><i class=" icon-eye-open"></i> <span>View</span></a></li>
+            <li><a href="<%= sails.config.custom.baseUrl %>blog/create"><i class="icon icon-plus-sign"></i> <span>Create</span></a></li>
+            <li><a href=""><i class="icon icon-pencil"></i> <span>Update</span></a></li>
+        </ul>
+    </div>
+    <!-- End of Header -->
+    <!-- Content -->
+    <div id="content">
+        <div id="content-header">
+            <h1><%= title %></h1>
+        </div>
+
+    <%- body %>
+
+            <!-- Footer -->
+            <div class="row-fluid" style="margin-top:18rem;">
+                <div id="footer" class="span12">
+                  2017 &copy; Jayson D. Macatangay
+                </div>
+            </div>
+            <!-- End of Footer -->
+        </div>
+    </div>
+     <!-- End of Content -->
+    <!--
+        Client-side Templates
+        ========================
+
+        HTML templates are important prerequisites of modern, rich client applications.
+        To work their magic, frameworks like React, Vue.js, Angular, Ember, and Backbone
+        require that you load these templates client-side.
+
+        By default, your Gruntfile is configured to automatically load and precompile
+        client-side JST templates in your `assets/templates` folder, then
+        include them here automatically (between TEMPLATES and TEMPLATES END).
+
+        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Import templates from other directories
+            + Use a different view engine (handlebars, dust, pug/jade, etc.)
+            + Internationalize your client-side templates using a server-side
+              stringfile before they're served.
+    -->
+
+    <!--TEMPLATES-->
+    
+    <!--TEMPLATES END-->
+
+
+    <!--
+        Server-side View Locals
+        ========================
+
+        Sometimes, it's convenient to get access to your server-side view locals from
+        client-side JavaScript.  This can improve page load times, remove the need for
+        extra AJAX requests, and make your client-side code easier to understand and
+        to maintain.  Sails provides a simple mechanism for accessing dynamic view
+        locals: the "exposeLocalsToBrowser()" view partial.
+
+        For more information on using this built-in feature, see:
+        https://sailsjs.com/docs/concepts/views/locals#?escaping-untrusted-data-using-exposelocalstobrowser
+
+    -->
+
+
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+
+    <!--SCRIPTS-->
+    <script src="/dependencies/sails.io.js"></script>
+    <script src="/dependencies/js/jquery.min.js"></script>
+    <script src="/dependencies/js/jquery-ui.custom.min.js"></script>
+    <script src="/dependencies/js/bootstrap.min.js"></script>
+    <script src="/js/excanvas.min.js"></script>
+    <script src="/js/jquery.uniform.js"></script>
+    <script src="/js/select2.min.js"></script>
+    <script src="/js/jquery.peity.min.js"></script>
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="/js/fullcalendar.min.js"></script>
+    <script src="/js/jquery.validate.js"></script>
+    <script src="/js/unicorn.js"></script>
+    <script src="/js/unicorn.tables.js"></script>
+    <script src="/js/scripts.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

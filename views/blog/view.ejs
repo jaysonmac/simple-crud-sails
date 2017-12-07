@@ -1,0 +1,33 @@
+<div id="breadcrumb">
+    <a href="<%= sails.config.custom.baseUrl %>blog" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Simple CRUD</a>
+    <a href="<%= sails.config.custom.baseUrl %>blog/list">Blog Archive</a>
+    <a href=""><%= title %></a>
+</div>
+
+<div class="container-fluid">
+    <% var successMessage = 
+        `<div class="row-fluid">
+            <div class="span12">
+                <div class="alert alert-success">
+                    <button class="close" data-dismiss="alert">×</button>
+                    <strong>Success!</strong> You have successfully edited this article. Click <a href="`+sails.config.custom.baseUrl+`blog/list" class="otherlinks"><strong>here</strong></a> to go back to the blog archive.
+                </div>
+            </div>  
+        </div>`;
+    %><% if (success) { %>
+        <%- successMessage %>
+    <% } %>
+    <div class="row-fluid">
+        <div class="span12">
+            <%= content %>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <center>
+            <div class="span12" style="margin-top:2rem;">
+                <a href="<%= sails.config.custom.baseUrl %>blog" class="btn btn-inverse">Back to Home</a>
+            </div>
+        </center>
+    </div>
+
+    
