@@ -67,7 +67,7 @@ module.exports = {
 
     createGet: function (req, res) {
         return res.view('blog/create', {
-            'title' : 'Create a new article', 
+            'title' : 'Create a new article',
             'success' : false,
             'invalid' : false,
             layout: 'layouts/blog-layout'
@@ -84,7 +84,7 @@ module.exports = {
         catch (err) {
             if (err.code === 'E_UNIQUE') {
                 return res.view('blog/create', {
-                    'title' : 'Create a new article', 
+                    'title' : 'Create a new article',
                     'success' : false,
                     'invalid' : true,
                     layout: 'layouts/blog-layout'

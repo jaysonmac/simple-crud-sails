@@ -89,6 +89,7 @@ config/local.js
 
 node_modules
 bower_components
+assets/bower_components
 package-lock.json
 
 
@@ -131,4 +132,3 @@ lib-cov
 *.log
 *.out
 *.pid
-
