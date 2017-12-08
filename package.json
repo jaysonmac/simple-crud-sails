@@ -1,13 +1,10 @@
 {
   "dependencies": {
-    "grunt-bower-task": "^0.3.4",
     "async": "2.0.1",
     "connect-redis": "3.2.0",
     "grunt": "1.0.1",
-    "grunt-bower": "^0.21.4",
     "lodash": "3.10.1",
     "sails": "^1.0.0-41",
-    "sails-generate-bower": "0.0.2",
     "sails-hook-grunt": "^2.0.0",
     "sails-hook-orm": "^2.0.0-16",
     "sails-hook-sockets": "^1.4.0",
