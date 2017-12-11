@@ -32,7 +32,7 @@ function deleteArticle(slug) {
 	    type: "POST",
 	    data: { 'slug' : slug },
 	    success: function(data) {
-	        $(id).closest('tr').fadeOut(300,function(){
+	        $(id).closest('tr').fadeOut(400,function(){
 	            $(id).closest('tr').remove();
 	        });
 	    },

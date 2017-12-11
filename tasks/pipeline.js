@@ -37,17 +37,17 @@ var cssFilesToInject = [
   // Bring in `.css` files for themes and style guides (e.g. Bootstrap, Foundation)
   'bootstrap/dist/css/*.min.css',
   'font-awesome/css/font-awesome.min.css',
-  'admin-lte/dist/css/skins/_all-skins.min.css',
+  'Ionicons/css/ionicons.min.css',
   'admin-lte/dist/css/*.min.css',
+  'admin-lte/dist/css/skins/_all-skins.min.css',
   'select2/dist/css/select2.min.css',
   'admin-lte/plugins/pace/pace.min.css',
-  'Ionicons/css/ionicons.min.css',
   'datatables.net-bs/js/dataTables.bootstrap.min.css',
 
   // All of the rest of your custom `.css` files will be injected here,
   // in no particular order.  To customize the ordering, add additional
   // items here, _above_ this one.
-  'styles/*.css'
+  'styles/styles.css'
 ];
 
 
