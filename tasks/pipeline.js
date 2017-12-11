@@ -86,6 +86,7 @@ var jsFilesToInject = [
   'bower_components/select2/dist/js/select2.full.min.js',
   'bower_components/admin-lte/plugins/pace/pace.min.js',
   'bower_components/jquery-validation/dist/jquery.validate.min.js'
+  'js/*.js'
 ];
 
 
