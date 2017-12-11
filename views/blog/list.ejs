@@ -14,7 +14,7 @@
 
     <section class="content">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-md-12">
                 <div class="box">
                     <div class="box-header">
                         <h2 class="box-title">Articles</h2>
@@ -41,20 +41,20 @@
                                         <%= article.content.substr(0,75) + "..." %>
                                     </td>
                                     <td width="1%">
-                                        <a href="<%= sails.config.custom.baseUrl + 'blog/' + article.slug %>" class="btn btn-info btn-mini action">
-                                            <i class="icon icon-eye-open"></i><br>
+                                        <a href="<%= sails.config.custom.baseUrl + 'blog/' + article.slug %>" class="btn btn-info btn-flat btn-sm action">
+                                            <i class="fa fa-list-ul"></i><br>
                                             View
                                         </a>
                                     </td>
                                     <td width="1%">
-                                        <a href="<%= sails.config.custom.baseUrl + 'blog/edit/' + article.slug %>" class="btn btn-warning btn-mini action">
-                                            <i class="icon icon-pencil"></i><br>
+                                        <a href="<%= sails.config.custom.baseUrl + 'blog/edit/' + article.slug %>" class="btn btn-warning btn-flat btn-sm action">
+                                            <i class="fa fa-edit"></i><br>
                                             Edit
                                         </a>
                                     </td>
                                     <td width="1%">
-                                        <a data-toggle="modal" class="btn btn-danger btn-mini action" onclick="showModal('<%= article.slug %>')" id="<%= article.slug %>">
-                                            <i class="icon icon-trash"></i><br>
+                                        <a data-toggle="modal" class="btn btn-danger btn-flat btn-sm action" onclick="showModal('<%= article.slug %>')" id="<%= article.slug %>">
+                                            <i class="fa fa-trash-o"></i><br>
                                             Delete
                                         </a>
                                     </td>

@@ -41,12 +41,13 @@ var cssFilesToInject = [
   'admin-lte/dist/css/*.min.css',
   'select2/dist/css/select2.min.css',
   'admin-lte/plugins/pace/pace.min.css',
-  'datatables.net-bs/js/dataTables.bootstrap.min.css'
+  'Ionicons/css/ionicons.min.css',
+  'datatables.net-bs/js/dataTables.bootstrap.min.css',
 
   // All of the rest of your custom `.css` files will be injected here,
   // in no particular order.  To customize the ordering, add additional
   // items here, _above_ this one.
-
+  'styles/*.css'
 ];
 
 
@@ -89,6 +90,7 @@ var jsFilesToInject = [
   'jquery-validation/dist/jquery.validate.min.js',
   'datatables.net/js/jquery.dataTables.min.js',
   'datatables.net-bs/js/dataTables.bootstrap.min.js',
+  'fastclick/lib/fastclick.js',
   'js/*.js'
 ];
 

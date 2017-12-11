@@ -40,5 +40,5 @@ function deleteArticle(slug) {
 }
 // Changes normal table to DataTable
 $(function createDataTables () {
-    $('#articlesTable').DataTable()
+    $('#articlesTable').DataTable();
 });
