@@ -1,81 +1,71 @@
-<div id="breadcrumb">
-    <a href="<%= sails.config.custom.baseUrl %>blog" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Simple CRUD</a>
-    <a href="<%= sails.config.custom.baseUrl %>blog/list">Blog Archive</a>
-    <a href="#">Edit: <%= articleTitle %></a>
-</div>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <%= title %>
+            <small>Simple CRUD using SailsJS</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="<%= sails.config.custom.baseUrl %>blog"><i class="fa fa-home"></i>Simple CRUD</a></li>
+            <li><a href="<%= sails.config.custom.baseUrl %>blog/list"><i class="fa fa-list-alt"></i>Blog Archive</a></li>
+            <li class="active"><a href="<%= sails.config.custom.baseUrl %>blog/create"><i class="fa fa-edit"></i>Edit: <%= articleTitle %></a></li>
+        </ol>
+    </section>
 
-<div class="container-fluid">
-    <%  var errorMessage = 
-        `<div class="row-fluid">
-            <div class="span12">
-                <div class="alert alert-danger">
-                    <button class="close" data-dismiss="alert">×</button>
-                    <strong>Error!</strong> You already have the same title in another article. Please change your title.
+    <section class="content">
+        <%  var errorMessage =
+            `<div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h4><i class="icon fa fa-ban"></i>Error!</h4>
+                        You already have the same title in another article. Please change your title.
+                    </div>
                 </div>
-            </div>  
-        </div>`;
-    %>
-    <% if (invalid) { %>
-        <%- errorMessage %>
-    <% } %>
-    <div class="row-fluid">
-        <div class="span12">
-            <div class="widget-box">
-                <div class="widget-title">
-                    <span class="icon">
-                        <i class="icon-align-justify"></i>                                  
-                    </span>
-                    <h5><%= title %></h5>
-                </div>
-                <div class="widget-content">
-                    <form action="" method="POST">
-                        <div class="control-group">
-                            <label for="title" class="control-label">Title:</label>
-                            <div class="controls">
-                                <input type="text" name="title" style="width:95%;" required maxlength="255" value="<%= articleTitle %>"/>
-                                <input type="hidden" name="oldTitle" style="width:95%;" value="<%= articleTitle %>"/>
+            </div>`;
+        %>
+        <% if (invalid) { %>
+            <%- errorMessage %>
+        <% } %>
+        <div class="row">
+            <div class="col-md-12">
+                <form role="form" action="" method="POST">
+                    <div class="box box-success">
+                        <div class="box-header">
+                            <h2 class="box-title"><%= title %></h2>
+                        </div>
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="title">Title:</label>
+                                <div class="controls">
+                                    <input type="text" name="title" id="title" style="width:100%;" required maxlength="255" placeholder="Enter your desired title here..." class="form-control" value="<%= articleTitle %>" />
+                                    <input type="hidden" name="oldTitle" value="<%= articleTitle %>"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="content">Content:</label>
+                                <div class="controls">
+                                    <textarea name="content" id="content" style="width:100%;height:250px;" required maxlength="65535" placeholder="Type your blog article content here..." class="form-control"><%= articleContent %></textarea>
+                                    <input type="hidden" name="oldContent" value="<%= articleContent %>"/>
+                                </div>
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label for="content" class="control-label">Content:</label>
-                            <div class="controls">
-                                <textarea name="content" style="width:95%;height:250px;" required maxlength="65535"><%= articleContent %></textarea>
-                                <input type="hidden" name="oldContent" style="width:95%;" value="<%= articleContent %>"/>
-                            </div>
+                        <div class="box-footer">
+                            <center>
+                                <input type="submit" name="submit" value="Edit article" class="btn btn-warning btn-flat"/>
+                            </center>
                         </div>
-                        <center>
-                            <div class="form-actions">
-                                <input type="submit" name="submit" value="Edit Article" class="btn btn-primary"/>
-                            </div>
-                        </center>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
-
-    <!-- SUCCESS Modal -->
-    <div id="deleteModal" class="modal hide">
-        <div class="modal-header">
-            <button data-dismiss="modal" class="close" type="button">×</button>
-            <h3>Confirm</h3>
-        </div>
-        <div class="modal-body">
-            <p>Are you sure you want to delete this article?</p>
-        </div>
-        <div class="modal-footer">
-            <a class="btn btn-danger" id="deleteLink">Delete</a>
-            <a data-dismiss="modal" class="btn black" href="#" style="color:black;">Cancel</a>
-        </div>
-    </div>
-    <!-- End of SUCCESS Modal -->
-
-    <div class="row-fluid">
-        <center>
-            <div class="span12" style="margin-top:2rem;">
-                <a href="<%= sails.config.custom.baseUrl %>blog" class="btn btn-inverse">Back to Home</a>
+        <!-- Back to Home -->
+        <div class="row">
+            <div class="col-xs-12">
+                <center>
+                    <a href="<%= sails.config.custom.baseUrl %>blog" class="btn btn-primary btn-flat">Back to Home</a>
+                </center>
             </div>
-        </center>
-    </div>
-
-    
+        </div>
+    </section>
