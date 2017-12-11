@@ -7,7 +7,7 @@
             <small>Simple CRUD using SailsJS</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="<%= sails.config.custom.baseUrl %>blog"><i class="fa fa-dashboard"></i>Simple CRUD</a></li>
+            <li><a href="<%= sails.config.custom.baseUrl %>blog"><i class="fa fa-home"></i>Simple CRUD</a></li>
             <li class="active"><%= title %></li>
         </ol>
     </section>
@@ -16,26 +16,28 @@
     <section class="content">
         <div class="row" style="margin-top:10rem;">
             <div class="col-md-6 col-md-offset-3">
-                <div class="info-box bg-aqua">
-                    <span class="info-box-icon"><i class="fa fa-newspaper-o"></i></span>
-
-                    <div class="info-box-content">
-                        <a href="<%= sails.config.custom.baseUrl %>blog/list" class="nostyle"><p style="font-size:5rem;text-align:center;">View Blog</p></a>
+                <a href="<%= sails.config.custom.baseUrl %>blog/list" class="nostyle">
+                    <div class="info-box bg-aqua">
+                        <span class="info-box-icon"><i class="fa fa-newspaper-o"></i></span>
+                        <div class="info-box-content">
+                            <p style="font-size:5rem;text-align:center;">View Blog</p>
+                        </div>
+                        <!-- /.info-box-content -->
                     </div>
-                    <!-- /.info-box-content -->
-                </div>
+                </a>
                 <!-- /.info-box -->
             </div>
 
             <div class="col-md-6 col-md-offset-3">
-                <div class="info-box bg-yellow">
-                    <span class="info-box-icon"><i class="fa fa-pencil-square-o"></i></span>
-
-                    <div class="info-box-content">
-                        <a href="<%= sails.config.custom.baseUrl %>blog/create" class="nostyle"><p style="font-size:5rem;text-align:center;">Create Article</p></a>
+                <a href="<%= sails.config.custom.baseUrl %>blog/create" class="nostyle">
+                    <div class="info-box bg-yellow">
+                        <span class="info-box-icon"><i class="fa fa-plus-square-o"></i></span>
+                        <div class="info-box-content">
+                            <p style="font-size:5rem;text-align:center;">Create Article</p>
+                        </div>
+                        <!-- /.info-box-content -->
                     </div>
-                    <!-- /.info-box-content -->
-                </div>
+                </a>
                 <!-- /.info-box -->
             </div>
 

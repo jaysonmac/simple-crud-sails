@@ -1,87 +1,98 @@
-<div id="breadcrumb">
-    <a href="<%= sails.config.custom.baseUrl %>blog" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Simple CRUD</a>
-    <a href="#"><%= title %></a>
-</div>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <%= title %>
+            <small>Simple CRUD using SailsJS</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="<%= sails.config.custom.baseUrl %>blog"><i class="fa fa-home"></i>Simple CRUD</a></li>
+            <li class="active"><a href="<%= sails.config.custom.baseUrl %>blog"><i class="fa fa-list-alt"></i><%= title %></a></li>
+        </ol>
+    </section>
 
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span12">
-            <div class="widget-box">
-                <div class="widget-title">
-                    <span class="icon">
-                        <i class="icon-align-justify"></i>                                  
-                    </span>
-                    <h5>Articles</h5>
-                </div>
-                <div class="widget-content nopadding">
-                    <table class="table table-bordered table-striped table-hover data-table" id="articleTable">
-                        <thead>
-                            <th>Title</th>
-                            <th>Content</th>
-                            <th>Create</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                        </thead>
-                        <tbody>
-                            <% blog.forEach( function (article) { // Use foreach to display all articles in each row %>
-                            <tr>
-                                <td>
-                                    <a href = "<%= sails.config.custom.baseUrl + "blog/" + article.slug %>" style="color:black;">
-                                        <%= article.title %>
-                                    </a>
-                                </td>
-                                <td>
-                                    <%= article.content.substr(0,75) + "..." %>
-                                </td>
-                                <td width="1%">
-                                    <a href="<%= sails.config.custom.baseUrl + "blog/" + article.slug %>" class="btn btn-info btn-mini action">
-                                        <i class="icon icon-eye-open"></i><br>
-                                        View
-                                    </a>
-                                </td>
-                                <td width="1%">
-                                    <a href="<%= sails.config.custom.baseUrl + "blog/edit/" + article.slug %>" class="btn btn-warning btn-mini action">
-                                        <i class="icon icon-pencil"></i><br>
-                                        Edit
-                                    </a>
-                                </td>
-                                <td width="1%">
-                                    <a data-toggle="modal" class="btn btn-danger btn-mini action" onclick="showModal('<%= article.slug %>')" id="<%= article.slug %>">
-                                        <i class="icon icon-trash"></i><br>
-                                        Delete
-                                    </a>
-                                </td>
-                            </tr>
-                            <% } )// End of foreach %>
-                        </tbody>
-                    </table>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h2 class="box-title">Articles</h2>
+                    </div>
+                    <div class="box-body">
+                        <table id="articlesTable" class="table table-bordered table-striped table-hover">
+                            <thead>
+                                <th>Title</th>
+                                <th>Content</th>
+                                <th>Create</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </thead>
+                            <tbody>
+                                <!-- Use foreach to display all articles in each row -->
+                                <% blog.forEach( function (article) {  %>
+                                <tr>
+                                    <td>
+                                        <a href = "<%= sails.config.custom.baseUrl + 'blog/' + article.slug %>" style="color:black;">
+                                            <%= article.title %>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <%= article.content.substr(0,75) + "..." %>
+                                    </td>
+                                    <td width="1%">
+                                        <a href="<%= sails.config.custom.baseUrl + 'blog/' + article.slug %>" class="btn btn-info btn-mini action">
+                                            <i class="icon icon-eye-open"></i><br>
+                                            View
+                                        </a>
+                                    </td>
+                                    <td width="1%">
+                                        <a href="<%= sails.config.custom.baseUrl + 'blog/edit/' + article.slug %>" class="btn btn-warning btn-mini action">
+                                            <i class="icon icon-pencil"></i><br>
+                                            Edit
+                                        </a>
+                                    </td>
+                                    <td width="1%">
+                                        <a data-toggle="modal" class="btn btn-danger btn-mini action" onclick="showModal('<%= article.slug %>')" id="<%= article.slug %>">
+                                            <i class="icon icon-trash"></i><br>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                            <% } ); %>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <center>
+                    <a href="<%= sails.config.custom.baseUrl %>blog" class="btn btn-primary btn-flat">Back to Home</a>
+                </center>
+            </div>
+        </div>
+    </section>
 
     <!-- DELETE Modal -->
-    <div id="deleteModal" class="modal hide">
-        <div class="modal-header">
-            <button data-dismiss="modal" class="close" type="button">×</button>
-            <h3>Confirm</h3>
-        </div>
-        <div class="modal-body">
-            <p>Are you sure you want to delete this article?</p>
-        </div>
-        <div class="modal-footer">
-            <a data-dismiss="modal" class="btn btn-danger" id="deleteLink">Delete</a>
-            <a data-dismiss="modal" class="btn black" href="#" style="color:black;">Cancel</a>
+    <div id="deleteModal" class="modal modal-danger fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4>Confirm</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this article?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline" id="deleteLink">Delete</button>
+                </div>
+            </div>
         </div>
     </div>
     <!-- End of DELETE Modal -->
-
-    <div class="row-fluid">
-        <center>
-            <div class="span12" style="margin-top:2rem;">
-                <a href="<%= sails.config.custom.baseUrl %>blog" class="btn btn-inverse">Back to Home</a>
-            </div>
-        </center>
-    </div>
-
-    
+</div>

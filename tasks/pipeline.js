@@ -35,12 +35,13 @@
 var cssFilesToInject = [
 
   // Bring in `.css` files for themes and style guides (e.g. Bootstrap, Foundation)
-  'bower_components/bootstrap/dist/css/*.min.css',
-  'bower_components/font-awesome/css/font-awesome.min.css',
-  'bower_components/admin-lte/dist/css/skins/_all-skins.min.css',
-  'bower_components/admin-lte/dist/css/*.min.css',
-  'bower_components/select2/dist/css/select2.min.css',
-  'bower_components/admin-lte/plugins/pace/pace.min.css'
+  'bootstrap/dist/css/*.min.css',
+  'font-awesome/css/font-awesome.min.css',
+  'admin-lte/dist/css/skins/_all-skins.min.css',
+  'admin-lte/dist/css/*.min.css',
+  'select2/dist/css/select2.min.css',
+  'admin-lte/plugins/pace/pace.min.css',
+  'datatables.net-bs/js/dataTables.bootstrap.min.css'
 
   // All of the rest of your custom `.css` files will be injected here,
   // in no particular order.  To customize the ordering, add additional
@@ -73,19 +74,21 @@ var jsFilesToInject = [
   // Bring in `.js` files for any other client-side JavaScript dependencies.
   // (e.g. Lodash, Vue.js, jQuery, Bootstrap, Ember, Angular, etc.)
   // > Be sure to list dependencies that depend on each other in the right order!
-  'bower_components/jquery/dist/jquery.min.js',
-  'bower_components/jquery-ui/jquery-ui.min.js',
-  'bower_components/bootstrap/dist/js/**/*.min.js',
+  'jquery/dist/jquery.min.js',
+  'jquery-ui/jquery-ui.min.js',
+  'bootstrap/dist/js/**/*.min.js',
 
   // All of the rest of your custom client-side js files will be injected here,
   // in no particular order.  To customize the ordering, add additional items
   // here, _above_ this one.
 
-  'bower_components/admin-lte/plugins/input-mask/jquery.inputmask.js',
-  'bower_components/admin-lte/dist/js/*.min.js',
-  'bower_components/select2/dist/js/select2.full.min.js',
-  'bower_components/admin-lte/plugins/pace/pace.min.js',
-  'bower_components/jquery-validation/dist/jquery.validate.min.js'
+  'admin-lte/plugins/input-mask/jquery.inputmask.js',
+  'admin-lte/dist/js/*.min.js',
+  'select2/dist/js/select2.full.min.js',
+  'admin-lte/plugins/pace/pace.min.js',
+  'jquery-validation/dist/jquery.validate.min.js',
+  'datatables.net/js/jquery.dataTables.min.js',
+  'datatables.net-bs/js/dataTables.bootstrap.min.js',
   'js/*.js'
 ];
 
