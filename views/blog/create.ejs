@@ -1,82 +1,83 @@
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <%= title %>
-            <small>Simple CRUD using SailsJS</small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="<%= sails.config.custom.baseUrl %>blog"><i class="fa fa-home"></i>Simple CRUD</a></li>
-            <li class="active"><a href="<%= sails.config.custom.baseUrl %>blog/create"><i class="fa fa-plus-square-o"></i><%= title %></a></li>
+<section class="content">
+    <!-- Title -->
+    <div class="container-fluid">
+        <ol class="breadcrumb" style="display:inline-block;float:right;margin-top:0">
+            <li><a href="<%= sails.config.custom.baseUrl %>blog"><i class="material-icons">home</i> Simple CRUD</a></li>
+            <li class="active"><a href="<%= sails.config.custom.baseUrl %>blog/create"><i class="material-icons">mode_edit</i> <%= title %></a></li>
         </ol>
-    </section>
-
-    <section class="content">
-        <% var successMessage =
-            `<div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-success alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <h4><i class="icon fa fa-check"></i>Success!</h4>
-                        You have successfully created a new article.
-                    </div>
+        <div class="block-header" style="display:inline-block;margin-top:0.7rem">
+            <h2 style="display:inline-block;font-size:2rem;"><%= title %></h2> &mdash; <small>Simple CRUD (SailsJS)</small>
+        </div>
+    </div>
+    <!-- #Title -->
+    <% var successMessage =
+        `<div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Success!</strong> You have successfully created a new article. Click <a href="`+sails.config.custom.baseUrl+`blog">here</a> to go back to the blog archive
                 </div>
-            </div>`;
-            var errorMessage =
-            `<div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-danger alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <h4><i class="icon fa fa-ban"></i>Error!</h4>
-                        You already have the same title in another article. Please change your title.
-                    </div>
+            </div>
+        </div>`;
+        var errorMessage =
+        `<div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Error!</strong>You already have the same title in another article. Please change your title.
                 </div>
-            </div>`;
-        %>
-        <% if (success) { %>
-            <%- successMessage %>
-        <% } %>
-        <% if (invalid) { %>
-            <%- errorMessage %>
-        <% } %>
-        <div class="row">
-            <div class="col-md-12">
-                <form role="form" action="" method="POST">
-                    <div class="box box-success">
-                        <div class="box-header">
-                            <h2 class="box-title"><%= title %></h2>
-                        </div>
-                        <div class="box-body">
-                            <div class="form-group">
-                                <label for="title">Title:</label>
-                                <div class="controls">
-                                    <input type="text" name="title" id="title" style="width:100%;" required maxlength="255" placeholder="Enter your desired title here..." class="form-control"/>
+            </div>
+        </div>`;
+    %>
+    <% if (success) { %>
+        <%- successMessage %>
+    <% } %>
+    <% if (invalid) { %>
+        <%- errorMessage %>
+    <% } %>
+    <div class="row clearfix">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <form role="form" action="" method="POST" id="createForm">
+                <div class="card">
+                    <div class="header">
+                        <h2>Enter your article here</h2>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="col-sm-12">
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <label for="title" class="form-label">Title</label>
+                                        <input type="text" name="title" id="title" required maxlength="255" class="form-control"/>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="content">Content:</label>
-                                <div class="controls">
-                                    <textarea name="content" id="content" style="width:100%;height:250px;" required maxlength="65535" placeholder="Type your blog article content here..." class="form-control"></textarea>
+                            <div class="col-sm-12">
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <label for="content" class="form-label">Content:</label>
+                                        <textarea rows="5" name="content" id="content" required maxlength="65535" class="form-control auto-growth"></textarea>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="box-footer">
-                            <center>
-                                <input type="submit" name="submit" value="Create a new article" class="btn btn-success btn-flat"/>
-                            </center>
+                            <div class="col-sm-12">
+                                <center>
+                                    <button type="submit" form="createForm" name="submit" class="btn btn-success waves-effect">Create a new article</button>
+                                </center>
+                            </div>
                         </div>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
-        <!-- Back to Home -->
-        <div class="row">
-            <div class="col-xs-12">
-                <center>
-                    <a href="<%= sails.config.custom.baseUrl %>blog" class="btn btn-primary btn-flat">Back to Home</a>
-                </center>
-            </div>
+    </div>
+    <!-- Back to Home -->
+    <div class="row clearfix" style="margin-bottom:2rem;">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <center>
+                <a href="<%= sails.config.custom.baseUrl %>blog" class="btn btn-primary waves-effect">Back to Home</a>
+            </center>
         </div>
-    </section>
-</div>
+    </div>
+    <!-- #Back to Home -->
+</section>

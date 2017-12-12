@@ -45,3 +45,4 @@ $(function createDataTables () {
         responsive: true
     });
 });
+autosize($('textarea.auto-growth'));

@@ -43,6 +43,9 @@ var cssFilesToInject = [
   'css/themes/all-themes.min.css',
   'plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css',
   'plugins/font-awesome/css/font-awesome.min.css',
+  'plugins/waitme/waitMe.css',
+  'plugins/sweetalert/sweetalert.css',
+  'plugins/autosize/autosize.js'
   // All of the rest of your custom `.css` files will be injected here,
   // in no particular order.  To customize the ordering, add additional
   // items here, _above_ this one.
