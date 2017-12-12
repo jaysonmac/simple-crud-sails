@@ -1,19 +1,20 @@
 // Sidebar menu active item changer
-var sidebarItem = $('.sidebar-menu .item');
 $(document).ready(function() {
-	if (window.location.pathname=="/blog") { // Home
+    var sidebarItem = $('#leftsidebar .menu .list .item');
+    var path = window.location.pathname;
+	if (path=="/blog") { // Home
 		sidebarItem.removeClass("active");
 		sidebarItem.eq(0).addClass("active");
 	}
-	else if (window.location.pathname=="/blog/create") { // Create
+	else if (path=="/blog/create") { // Create
 		sidebarItem.removeClass("active");
 		sidebarItem.eq(2).addClass("active");
 	}
-	else if (window.location.pathname.substring(0,10)=="/blog/edit") { // Edit
+	else if (path.substring(0,10)=="/blog/edit") { // Edit
 		sidebarItem.removeClass("active");
 		sidebarItem.eq(3).addClass("active");
 	}
-	else if (window.location.pathname.substring(0,6)=="/blog/list" || "/blog/view") { // View
+	else if (path.substring(0,6)=="/blog/list" || "/blog/view") { // View
 		sidebarItem.removeClass("active");
 		sidebarItem.eq(1).addClass("active");
 	}
@@ -40,5 +41,7 @@ function deleteArticle(slug) {
 }
 // Changes normal table to DataTable
 $(function createDataTables () {
-    $('#articlesTable').DataTable();
+    $('#articlesTable').DataTable({
+        responsive: true
+    });
 });

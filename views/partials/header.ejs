@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Page Loader -->
-<%# <div class="page-loader-wrapper">
+<div class="page-loader-wrapper">
     <div class="loader">
         <div class="preloader">
             <div class="spinner-layer pl-red">
@@ -14,7 +14,7 @@
         </div>
         <p>Please wait...</p>
     </div>
-</div>%>
+</div>
 <!-- #END# Page Loader -->
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div>
@@ -37,25 +37,25 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">Navigation</li>
-                <li class="active">
+                <li class="active item">
                     <a href="<%= sails.config.custom.baseUrl %>blog">
                         <i class="material-icons">home</i>
                         <span>Home</span>
                     </a>
                 </li>
-                <li>
+                <li class="item">
                     <a href="<%= sails.config.custom.baseUrl %>blog/list">
                         <i class="material-icons">pageview</i>
                         <span>View</span>
                     </a>
                 </li>
-                <li>
+                <li class="item">
                     <a href="<%= sails.config.custom.baseUrl %>blog/create">
                         <i class="material-icons">add_box</i>
                         <span>Create</span>
                     </a>
                 </li>
-                <li>
+                <li class="item">
                     <a href="#">
                         <i class="material-icons">mode_edit</i>
                         <span>Update</span>

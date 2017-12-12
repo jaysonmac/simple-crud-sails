@@ -41,6 +41,8 @@ var cssFilesToInject = [
   'plugins/morrisjs/morris.css',
   'css/style.min.css',
   'css/themes/all-themes.min.css',
+  'plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css',
+  'plugins/font-awesome/css/font-awesome.min.css',
   // All of the rest of your custom `.css` files will be injected here,
   // in no particular order.  To customize the ordering, add additional
   // items here, _above_ this one.
@@ -82,6 +84,9 @@ var jsFilesToInject = [
   'plugins/bootstrap-select/js/bootstrap-select.js',
   'plugins/jquery-slimscroll/jquery.slimscroll.js',
   'plugins/node-waves/waves.js',
+  'plugins/jquery-datatable/jquery.dataTables.js',
+  'plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js',
+  'plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js',
   'plugins/jquery-countto/jquery.countTo.js',
   'plugins/raphael/raphael.min.js',
   'plugins/morrisjs/morris.js',
@@ -92,6 +97,7 @@ var jsFilesToInject = [
   'plugins/flot-charts/jquery.flot.categories.js',
   'plugins/flot-charts/jquery.flot.time.js',
   'plugins/jquery-sparkline/jquery.sparkline.js',
+  'js/admin.js',
   'scripts/*.js'
 ];
 

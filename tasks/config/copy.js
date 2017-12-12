@@ -37,6 +37,16 @@ module.exports = function(grunt) {
                 cwd: './bower_components/adminbsb-materialdesign',
                 src: ['**/*.js'],
                 dest: '.tmp/public'
+            }, {
+                expand: true,
+                cwd: './bower_components/adminbsb-materialdesign/plugins/bootstrap/fonts',
+                src: ['**/*'],
+                dest: '.tmp/public/plugins/bootstrap/fonts'
+            }, {
+                expand: true,
+                cwd: './bower_components/adminbsb-materialdesign/plugins/font-awesome/fonts',
+                src: ['**/*'],
+                dest: '.tmp/public/plugins/font-awesome/fonts'
             }
             // , {
             //     expand: true,
