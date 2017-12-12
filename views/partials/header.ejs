@@ -1,43 +1,79 @@
 <!DOCTYPE html>
-<div class="wrapper">
-    <!-- Main Header -->
-    <header class="main-header">
-
-        <!-- Logo -->
-        <a href="<%= sails.config.custom.baseUrl %>blog" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini">S<b>C</b></span>
-            <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg">Simple <b>CRUD</b></span>
-        </a>
-
-        <!-- Header Navbar -->
-        <nav class="navbar navbar-static-top" role="navigation">
-            <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                <span class="sr-only">Toggle navigation</span>
-            </a>
-        </nav>
-
-    </header>
-    <!-- End of Main Header -->
-
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-
-            <!-- Sidebar Menu -->
-            <ul class="sidebar-menu" data-widget="tree">
-                <li class="header">Simple CRUD using SailsJS</li>
-                <!-- Optionally, you can add icons to the links -->
-                <li class="item"><a href="<%= sails.config.custom.baseUrl %>blog"><i class="fa fa-home"></i> <span>Home</span></a></li>
-                <li class="item"><a href="<%= sails.config.custom.baseUrl %>blog/list"><i class="fa fa-list-alt"></i> <span>View</span></a></li>
-                <li class="item"><a href="<%= sails.config.custom.baseUrl %>blog/create"><i class="fa fa-plus-square-o"></i> <span>Create</span></a></li>
-                <li class="item"><a href="#"><i class="fa fa-edit"></i> <span>Update</span></a></li>
+<!-- Page Loader -->
+<%# <div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="preloader">
+            <div class="spinner-layer pl-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+        <p>Please wait...</p>
+    </div>
+</div>%>
+<!-- #END# Page Loader -->
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+<!-- #END# Overlay For Sidebars -->
+<!-- Top Bar -->
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+            <a href="javascript:void(0);" class="bars"></a>
+            <a class="navbar-brand" href="<%= sails.config.custom.baseUrl %>blog">Simple CRUD using SailsJS</a>
+        </div>
+    </div>
+</nav>
+<!-- #Top Bar -->
+<section>
+    <!-- Left Sidebar -->
+    <aside id="leftsidebar" class="sidebar">
+        <!-- Menu -->
+        <div class="menu">
+            <ul class="list">
+                <li class="header">Navigation</li>
+                <li class="active">
+                    <a href="<%= sails.config.custom.baseUrl %>blog">
+                        <i class="material-icons">home</i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<%= sails.config.custom.baseUrl %>blog/list">
+                        <i class="material-icons">pageview</i>
+                        <span>View</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<%= sails.config.custom.baseUrl %>blog/create">
+                        <i class="material-icons">add_box</i>
+                        <span>Create</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">mode_edit</i>
+                        <span>Update</span>
+                    </a>
+                </li>
             </ul>
-            <!-- /.sidebar-menu -->
-        </section>
-        <!-- /.sidebar -->
+        </div>
+        <!-- #Menu -->
+        <!-- Footer -->
+        <div class="legal">
+            <div class="copyright">
+                &copy; 2017 <strong>Jayson Macatangay</strong>
+            </div>
+            <div class="version">
+                <b>Version: </b> 3.0.0
+            </div>
+        </div>
+        <!-- #Footer -->
     </aside>
+    <!-- #END# Left Sidebar -->
+</section>
