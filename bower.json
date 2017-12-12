@@ -1,4 +1,17 @@
 {
+  "name": "simple-crud-sails",
+  "description": "A Simple CRUD using SailsJS",
+  "main": "app.js",
+  "authors": [
+    "Jayson Macatangay"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "CRUD",
+    "Sails"
+  ],
+  "homepage": "None",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -7,24 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "admin-lte": "^2.4.2",
-    "jquery-validation": "^1.17.0",
-    "font-awesome": "^4.7.0"
-  },
-  "name": "simple-crud-sails",
-  "version": "0.0.0",
-  "author": "anonymous node/sails user",
-  "private": true,
-  "authors": [
-    "Jayson Macatangay"
-  ],
-  "description": "A Simple CRUD using MySQL",
-  "main": "app.js",
-  "keywords": [
-    "CRUD",
-    "MySQL",
-    "Sails"
-  ],
-  "license": "None",
-  "homepage": "None"
+    "adminbsb-materialdesign": "^1.0.5"
+  }
 }

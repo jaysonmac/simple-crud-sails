@@ -20,10 +20,22 @@ module.exports = function(grunt) {
                 cwd: './assets',
                 src: ['**/*.!(coffee|less)'],
                 dest: '.tmp/public'
+            },
+            //  {
+            //     expand: true,
+            //     cwd: './bower_components/adminbsb-materialdesign',
+            //     src: ['**/*.!(coffee|less)'],
+            //     dest: '.tmp/public'
+            // },
+             {
+                expand: true,
+                cwd: './bower_components/adminbsb-materialdesign',
+                src: ['**/*.css'],
+                dest: '.tmp/public'
             }, {
                 expand: true,
-                cwd: './bower_components',
-                src: ['**/*.!(coffee|less)'],
+                cwd: './bower_components/adminbsb-materialdesign',
+                src: ['**/*.js'],
                 dest: '.tmp/public'
             }
             // , {

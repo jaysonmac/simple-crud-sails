@@ -35,15 +35,12 @@
 var cssFilesToInject = [
 
   // Bring in `.css` files for themes and style guides (e.g. Bootstrap, Foundation)
-  'bootstrap/dist/css/*.min.css',
-  'font-awesome/css/font-awesome.min.css',
-  'Ionicons/css/ionicons.min.css',
-  'admin-lte/dist/css/*.min.css',
-  'admin-lte/dist/css/skins/_all-skins.min.css',
-  'select2/dist/css/select2.min.css',
-  'admin-lte/plugins/pace/pace.min.css',
-  'datatables.net-bs/js/dataTables.bootstrap.min.css',
-
+  'plugins/bootstrap/css/bootstrap.min.css',
+  'plugins/node-waves/waves.min.css',
+  'plugins/animate-css/animate.min.css',
+  'plugins/morrisjs/morris.css',
+  'css/style.min.css',
+  'css/themes/all-themes.min.css',
   // All of the rest of your custom `.css` files will be injected here,
   // in no particular order.  To customize the ordering, add additional
   // items here, _above_ this one.
@@ -75,23 +72,27 @@ var jsFilesToInject = [
   // Bring in `.js` files for any other client-side JavaScript dependencies.
   // (e.g. Lodash, Vue.js, jQuery, Bootstrap, Ember, Angular, etc.)
   // > Be sure to list dependencies that depend on each other in the right order!
-  'jquery/dist/jquery.min.js',
-  'jquery-ui/jquery-ui.min.js',
-  'bootstrap/dist/js/**/*.min.js',
+  'plugins/jquery/jquery.min.js',
+  'plugins/bootstrap/js/bootstrap.js',
+
 
   // All of the rest of your custom client-side js files will be injected here,
   // in no particular order.  To customize the ordering, add additional items
-  // here, _above_ this one.
-
-  'admin-lte/plugins/input-mask/jquery.inputmask.js',
-  'admin-lte/dist/js/*.min.js',
-  'select2/dist/js/select2.full.min.js',
-  'admin-lte/plugins/pace/pace.min.js',
-  'jquery-validation/dist/jquery.validate.min.js',
-  'datatables.net/js/jquery.dataTables.min.js',
-  'datatables.net-bs/js/dataTables.bootstrap.min.js',
-  'fastclick/lib/fastclick.js',
-  'js/*.js'
+  // here, _above_ this one.\
+  'plugins/bootstrap-select/js/bootstrap-select.js',
+  'plugins/jquery-slimscroll/jquery.slimscroll.js',
+  'plugins/node-waves/waves.js',
+  'plugins/jquery-countto/jquery.countTo.js',
+  'plugins/raphael/raphael.min.js',
+  'plugins/morrisjs/morris.js',
+  'plugins/chartjs/Chart.bundle.js',
+  'plugins/flot-charts/jquery.flot.js',
+  'plugins/flot-charts/jquery.flot.resize.js',
+  'plugins/flot-charts/jquery.flot.pie.js',
+  'plugins/flot-charts/jquery.flot.categories.js',
+  'plugins/flot-charts/jquery.flot.time.js',
+  'plugins/jquery-sparkline/jquery.sparkline.js',
+  'scripts/*.js'
 ];
 
 
