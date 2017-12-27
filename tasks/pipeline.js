@@ -45,7 +45,6 @@ var cssFilesToInject = [
   'plugins/font-awesome/css/font-awesome.min.css',
   'plugins/waitme/waitMe.css',
   'plugins/sweetalert/sweetalert.css',
-  'plugins/autosize/autosize.js'
   // All of the rest of your custom `.css` files will be injected here,
   // in no particular order.  To customize the ordering, add additional
   // items here, _above_ this one.
@@ -100,7 +99,10 @@ var jsFilesToInject = [
   'plugins/flot-charts/jquery.flot.categories.js',
   'plugins/flot-charts/jquery.flot.time.js',
   'plugins/jquery-sparkline/jquery.sparkline.js',
+  'plugins/autosize/autosize.js',
+  'plugins/bootstrap-notify/bootstrap-notify.js',
   'js/admin.js',
+  'plugins/sweetalert/sweetalert.min.js',
   'scripts/*.js'
 ];
 

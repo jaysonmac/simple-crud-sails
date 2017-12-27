@@ -19,14 +19,8 @@ $(document).ready(function() {
 		sidebarItem.eq(1).addClass("active");
 	}
 });
-// Changes what article to delete by changing onclick attribute of delete button in modal
-function showModal(slug) {
-    event.preventDefault();
-    $('#deleteLink').attr('onclick', "deleteArticle('"+slug+"')");
-    $("#deleteModal").modal("show");
-}
 // AJAX to delete article
-function deleteArticle(slug) {
+function deleteArticle(slug, cb) {
 	var id = '#'+slug;
 	$.ajax({
 	    url: "../blog/delete/"+slug,
@@ -36,6 +30,7 @@ function deleteArticle(slug) {
 	        $(id).closest('tr').fadeOut(400,function(){
 	            $(id).closest('tr').remove();
 	        });
+          return cb();
 	    },
 	});
 }
@@ -45,4 +40,22 @@ $(function createDataTables () {
         responsive: true
     });
 });
+// For textareas
 autosize($('textarea.auto-growth'));
+// Confirm dialog for delete
+function showConfirmMessage(slug) {
+    var article = slug;
+    swal({
+        title: "Confirmation",
+        text: "Are your sure you want to delete this article?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#F44336",
+        confirmButtonText: "Delete",
+        closeOnConfirm: false
+    }, function () {
+        deleteArticle(article, function() {
+          swal("Deleted!", "The article has been successfully deleted", "success");
+        });
+    });
+}

@@ -1,43 +1,47 @@
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <%= title %>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="<%= sails.config.custom.baseUrl %>blog"><i class="fa fa-home"></i>Simple CRUD</a></li>
-            <li><a href="<%= sails.config.custom.baseUrl %>blog/list"><i class="fa fa-list-alt"></i>Blog Archive</a></li>
-            <li class="active"><a href="<%= sails.config.custom.baseUrl %>blog/create"><i class="fa fa-list-ul"></i><%= title %></a></li>
+<section class="content">
+    <!-- Title -->
+    <div class="container-fluid">
+        <ol class="breadcrumb" style="display:inline-block;float:right;margin-top:0">
+            <li><a href="<%= sails.config.custom.baseUrl %>blog"><i class="material-icons">home</i> Simple CRUD</a></li>
+            <li class="active"><a href="<%= sails.config.custom.baseUrl %>blog"><i class="material-icons">layers</i> Blog Archive</a></li>
+            <li class="active"><a href="<%= sails.config.custom.baseUrl %>blog"><i class="material-icons">short_text</i> <%= title %></a></li>
         </ol>
-    </section>
-
-    <section class="content">
-        <% var successMessage =
-            `<div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-success alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <h4><i class="icon fa fa-check"></i>Success!</h4>
-                        You have successfully edited this article. Click <a href="`+sails.config.custom.baseUrl+`blog/list" class="otherlinks"><strong>here</strong></a> to go back to the blog archive.
-                    </div>
+        <div class="block-header" style="display:inline-block;margin-top:0.7rem">
+            <h2 style="display:inline-block;font-size:2rem;"><%= title %></h2> &mdash; <small>Simple CRUD (SailsJS)</small>
+        </div>
+    </div>
+    <!-- #Title -->
+    <% var successMessage =
+        `<div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h4><i class="icon fa fa-check"></i>Success!</h4>
+                    You have successfully edited this article. Click <a href="`+sails.config.custom.baseUrl+`blog/list" class="otherlinks alert-link"><strong>here</strong></a> to go back to the blog archive.
                 </div>
-            </div>`;
-        %><% if (success) { %>
-            <%- successMessage %>
-        <% } %>
-        <div class="row">
-            <div class="col-md-12">
-                <%= content %>
             </div>
+        </div>`;
+    %><% if (success) { %>
+        <%- successMessage %>
+    <% } %>
+    <!-- Article Content -->
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="card">
+              <div class="body">
+                  <%= content %>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- #Article Content -->
+    <!-- Back to Home -->
+    <div class="row clearfix" style="margin-bottom:2rem;">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <center>
+                <a href="<%= sails.config.custom.baseUrl %>blog" class="btn btn-primary waves-effect">Back to Home</a>
+            </center>
         </div>
-        <!-- Back to Home -->
-        <div class="row">
-            <div class="col-xs-12">
-                <center>
-                    <a href="<%= sails.config.custom.baseUrl %>blog" class="btn btn-primary btn-flat">Back to Home</a>
-                </center>
-            </div>
-        </div>
-    </section>
-</div>
+    </div>
+    <!-- #Back to Home -->
+</section>

@@ -137,7 +137,7 @@ module.exports = {
     editPost: async function (req, res) {
         var titleText = req.param('title'); // Fetches title from request parameters
         var oldSlug = String(req.param('slug'));
-        var newSlug = titleText.toLowerCase().replace(/\s/g,'-'); // Converts title to slug
+        var newSlug = titleText.toLowerCase().replace(/\s/g,'-'); // Converts title to slug (a normal title -> a-normal-title)
         var articleUpdate;
         try {
             articleUpdate = await Blog.update({ slug: oldSlug }, { title: req.param('title'), slug: newSlug, content: req.param('content') });
