@@ -71,39 +71,39 @@ var cssFilesToInject = [
 var jsFilesToInject = [
 
   // Load `sails.io` before everything else.
-  'dependencies/sails.io.js',
+  // 'dependencies/sails.io.js',
 
   // Bring in `.js` files for any other client-side JavaScript dependencies.
   // (e.g. Lodash, Vue.js, jQuery, Bootstrap, Ember, Angular, etc.)
   // > Be sure to list dependencies that depend on each other in the right order!
-  'plugins/jquery/jquery.min.js',
-  'plugins/bootstrap/js/bootstrap.js',
+  // 'plugins/jquery/jquery.min.js',
+  // 'plugins/bootstrap/js/bootstrap.js',
 
 
   // All of the rest of your custom client-side js files will be injected here,
   // in no particular order.  To customize the ordering, add additional items
   // here, _above_ this one.\
-  'plugins/bootstrap-select/js/bootstrap-select.js',
-  'plugins/jquery-slimscroll/jquery.slimscroll.js',
-  'plugins/node-waves/waves.js',
-  'plugins/jquery-datatable/jquery.dataTables.js',
-  'plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js',
-  'plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js',
-  'plugins/jquery-countto/jquery.countTo.js',
-  'plugins/raphael/raphael.min.js',
-  'plugins/morrisjs/morris.js',
-  'plugins/chartjs/Chart.bundle.js',
-  'plugins/flot-charts/jquery.flot.js',
-  'plugins/flot-charts/jquery.flot.resize.js',
-  'plugins/flot-charts/jquery.flot.pie.js',
-  'plugins/flot-charts/jquery.flot.categories.js',
-  'plugins/flot-charts/jquery.flot.time.js',
-  'plugins/jquery-sparkline/jquery.sparkline.js',
-  'plugins/autosize/autosize.js',
-  'plugins/bootstrap-notify/bootstrap-notify.js',
-  'js/admin.js',
-  'plugins/sweetalert/sweetalert.min.js',
-  'scripts/*.js'
+  // 'plugins/bootstrap-select/js/bootstrap-select.js',
+  // 'plugins/jquery-slimscroll/jquery.slimscroll.js',
+  // 'plugins/node-waves/waves.js',
+  // 'plugins/jquery-datatable/jquery.dataTables.js',
+  // 'plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js',
+  // 'plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js',
+  // 'plugins/jquery-countto/jquery.countTo.js',
+  // 'plugins/raphael/raphael.min.js',
+  // 'plugins/morrisjs/morris.js',
+  // 'plugins/chartjs/Chart.bundle.js',
+  // 'plugins/flot-charts/jquery.flot.js',
+  // 'plugins/flot-charts/jquery.flot.resize.js',
+  // 'plugins/flot-charts/jquery.flot.pie.js',
+  // 'plugins/flot-charts/jquery.flot.categories.js',
+  // 'plugins/flot-charts/jquery.flot.time.js',
+  // 'plugins/jquery-sparkline/jquery.sparkline.js',
+  // 'plugins/autosize/autosize.js',
+  // 'plugins/bootstrap-notify/bootstrap-notify.js',
+  // 'js/admin.js',
+  // 'plugins/sweetalert/sweetalert.min.js',
+  // 'scripts/*.js'
 ];
 
 

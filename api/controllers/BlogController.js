@@ -6,9 +6,10 @@
  */
 
 module.exports = {
-    index: function (req, res) {
+    index: async function (req, res) {
         return res.view('blog/index', {
             'title' : 'Home',
+            'mainJS' : sails.config.custom.baseUrl + 'js/blog/blog.index.js',
             layout: 'layouts/blog-layout'
         })
     },
@@ -32,6 +33,7 @@ module.exports = {
             'blog' : blogList,
             'update' : false,
             'delete' : false,
+            'mainJS' : sails.config.custom.baseUrl + 'js/blog/blog.list.js',
             layout: 'layouts/blog-layout'
         })
     },
@@ -58,6 +60,7 @@ module.exports = {
                 'title' : blogArticle.title,
                 'content' : blogArticle.content,
                 layout: 'layouts/blog-layout',
+                'mainJS' : sails.config.custom.baseUrl + 'js/blog/blog.view.js',
                 'success' : req.session.editedFlag
             });
             req.session.editedFlag = false;
@@ -70,6 +73,7 @@ module.exports = {
             'title' : 'Create a new article',
             'success' : false,
             'invalid' : false,
+            'mainJS' : sails.config.custom.baseUrl + 'js/blog/blog.create-edit.js',
             layout: 'layouts/blog-layout'
         });
     },
@@ -102,6 +106,7 @@ module.exports = {
             'title' : 'Create a new article',
             'success' : true,
             'invalid' : false,
+            'mainJS' : sails.config.custom.baseUrl + 'js/blog/blog.create-edit.js',
             layout: 'layouts/blog-layout'
         });
     },
@@ -129,6 +134,7 @@ module.exports = {
                 'articleTitle' : blogArticle.title,
                 'articleContent' : blogArticle.content,
                 'invalid' : false,
+                'mainJS' : sails.config.custom.baseUrl + 'js/blog/blog.create-edit.js',
                 layout: 'layouts/blog-layout'
             });
         }
@@ -149,6 +155,7 @@ module.exports = {
                     'articleTitle' : req.param('oldTitle'),
                     'articleContent' : req.param('oldContent'),
                     'invalid' : true,
+                    'mainJS' : sails.config.custom.baseUrl + 'js/blog/blog.create-edit.js',
                     layout: 'layouts/blog-layout'
                 });
             }

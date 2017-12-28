@@ -47,6 +47,11 @@ module.exports = function(grunt) {
                 cwd: './bower_components/adminbsb-materialdesign/plugins/font-awesome/fonts',
                 src: ['**/*'],
                 dest: '.tmp/public/plugins/font-awesome/fonts'
+            }, {
+                expand: true,
+                cwd: './node_modules/requirejs',
+                src: ['**/*.js'],
+                dest: '.tmp/public/js'
             }
             // , {
             //     expand: true,

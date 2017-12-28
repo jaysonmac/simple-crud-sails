@@ -51,7 +51,7 @@
                                   </a>
                               </td>
                               <td width="1%" class="js-sweetalert">
-                                  <a onclick="showConfirmMessage('<%= article.slug %>')" class="btn btn-danger waves-effect action" id="<%= article.slug %>">
+                                  <a onclick="article.delete('<%= article.slug %>')" class="btn btn-danger waves-effect action" id="<%= article.slug %>">
                                       <i class="fa fa-trash-o"></i><br>
                                       Delete
                                   </a>

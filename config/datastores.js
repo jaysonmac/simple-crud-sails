@@ -55,7 +55,7 @@ module.exports.datastores = {
 
   mysqlBlog: {
     adapter: 'sails-mysql',
-    url: 'mysql://root:@localhost:3306/sample1'
+    url: 'mysql://root:@localhost:3306/blogdb'
   }
 
 
