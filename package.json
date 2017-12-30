@@ -16,7 +16,7 @@
   "name": "simple-crud-sails",
   "private": true,
   "version": "0.0.0",
-  "description": "a Sails application",
+  "description": "A Simple CRUD using SailsJS, Material Design and RequireJS",
   "keywords": [],
   "devDependencies": {
     "eslint": "3.19.0"
@@ -31,7 +31,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/simple-crud-sails.git"
+    "url": "https://github.com/jaysonmac/simple-crud-sails.git"
   },
   "author": "anonymous node/sails user",
   "license": "",

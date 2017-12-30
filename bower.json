@@ -5,12 +5,12 @@
   "authors": [
     "Jayson Macatangay"
   ],
-  "license": "MIT",
+  "license": "",
   "keywords": [
     "CRUD",
     "Sails"
   ],
-  "homepage": "None",
+  "homepage": "https://github.com/jaysonmac/simple-crud-sails",
   "private": true,
   "ignore": [
     "**/.*",
